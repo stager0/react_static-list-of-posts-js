@@ -1,22 +1,11 @@
 import './PostList.scss';
 import { PostInfo } from '../PostInfo';
 
-function getUserById(users, userId) {
-  return users.find(user => user.id === userId);
-}
-
-export const PostList = ({ users, posts, comments }) => {
+export const PostList = ({ posts }) => {
   return (
     <div className="PostList">
       {posts.map(post => {
-        const user = getUserById(users, post.userId);
-        const postObj = {
-          postElement: post,
-          user,
-          comments,
-        };
-
-        return <PostInfo post={postObj} key={post.id} />;
+        return <PostInfo post={post} key={post.id} />;
       })}
     </div>
   );
