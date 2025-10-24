@@ -1,3 +1,4 @@
+import './PostList.scss';
 import { PostInfo } from '../PostInfo';
 
 function getUserById(users, userId) {
@@ -5,7 +6,6 @@ function getUserById(users, userId) {
 }
 
 export const PostList = ({ users, posts, comments }) => {
-
   return (
     <div className="PostList">
       {posts.map(post => {

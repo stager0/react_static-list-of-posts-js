@@ -1,3 +1,4 @@
+import './CommentList.scss';
 import { CommentInfo } from '../CommentInfo';
 
 function getCommentsByPostId(comments, postId) {
